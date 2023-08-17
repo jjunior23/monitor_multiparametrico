@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Controle Monitor Multiparametrico - colocar tambem a media da PA</title>
+</head>
+<body>
+
+<h1>Controle</h1>
+<ul>
+    {% for parametro in parametros %}
+
+<li>
+    {{parametro.descricao}} - {{parametro.valor}} <a href="{% url 'editar' parametro.id %}">Editar</a>
+<!--     {{parametro.descricao}} - {{parametro.valor}} <a href="{% url 'editar' parametro.id %}">Editar</a> - <a href="{% url 'delete' parametro.id %}">Deletar</a>-->
+
+
+{% endfor %}
+</ul>
+
+<!--<form action="{% url 'inserir' %}" method="POST">-->
+<!--    {% csrf_token %}-->
+<!--    <input type="text" name="nome">-->
+<!--    <button type="submit">Inserir</button>-->
+<!--</form>-->
+
+</body>
+</html>

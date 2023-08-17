@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Controle - {{parametro.descricao}}</title>
+</head>
+<body>
+<h1>{{parametro.descricao}}</h1>
+<form action="{% url 'update' parametro.id %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="valor" value="{{parametro.valor}}">
+    <button type="submit">Atualizar</button>
+</form>
+
+
+</body>
+</html>
